@@ -1,0 +1,14 @@
+resources:
+  jobs:
+    ingest_orders_job:
+      name: ingest_orders_job
+      max_concurrent_runs: 1
+      parameters:
+        - name: catalog
+          default: ${var.catalog}
+        - name: schema
+          default: ${resources.schemas.bronze.name}
+      tasks:
+        - task_key: ingest_orders
+          notebook_task:
+            notebook_path: ../src/ingest_orders.py
