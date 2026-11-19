@@ -1,0 +1,11 @@
+resources:
+  catalogs:
+    catalog1:
+      name: demo_catalog
+      #storage_root: #abfss
+
+  schemas:
+    schema_di:
+      catalog_name: ${resources.catalogs.catalog1.name}
+      name: schema_demo
+      
