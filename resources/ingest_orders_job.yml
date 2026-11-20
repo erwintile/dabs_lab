@@ -6,11 +6,6 @@ resources:
       schedule:
         quartz_cron_expression: "0 0 14 * * ?"
         timezone_id: Asia/Ho_Chi_Minh
-      parameters:
-        - name: catalog
-          default: ${var.catalog}
-        - name: schema
-          default: ${resources.schemas.bronze.name}
       tasks:
         - task_key: ingest_orders
           notebook_task:

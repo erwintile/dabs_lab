@@ -1,5 +1,5 @@
 bundle:
-  name: dab_orders_demo
+  name: dab_orders_demo_son_thanh_hoa
 
 include:
   - resources/*.yml
