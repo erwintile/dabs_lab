@@ -14,4 +14,4 @@ resources:
       tasks:
         - task_key: ingest_orders
           notebook_task:
-            notebook_path: ../src/ingest_orders.py
+            notebook_path: ../src/ingest_orders.ipynb
