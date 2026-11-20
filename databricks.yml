@@ -16,24 +16,17 @@ targets:
     mode: development
     default: true
     workspace:
-      host: <DEV_WORKSPACE_HOST>
+      host: https://adb-7405606071868680.0.azuredatabricks.net
     variables:
       catalog: dev
 
   dev_shared:
     mode: production
     workspace:
-      host: <DEV_WORKSPACE_HOST>
+      host: https://adb-7405616270532932.12.azuredatabricks.net/
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog: dev
-    run_as:
-      service_principal_name: <SP_DAB_DEV_APP_ID>
-    permissions:
-      - service_principal_name: <SP_DAB_DEV_APP_ID>
-        level: CAN_MANAGE
-      - group_name: <DEV_GROUP>
-        level: CAN_VIEW
 
   prod:
     mode: production
@@ -42,10 +35,3 @@ targets:
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog: prod
-    run_as:
-      service_principal_name: <SP_DAB_PROD_APP_ID>
-    permissions:
-      - service_principal_name: <SP_DAB_PROD_APP_ID>
-        level: CAN_MANAGE
-      - group_name: <DEV_GROUP>
-        level: CAN_VIEW
