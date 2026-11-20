@@ -1,0 +1,8 @@
+resources:
+  catalogs:
+    main:
+      name: ${var.catalog}
+      storage_root: abfss://unitycatalog@sttilesonledabs.dfs.core.windows.net/dab_orders_demo/${var.catalog}
+      comment: Catalog for dab_orders_demo. Managed by Databricks Asset Bundle dab_orders_demo.
+      lifecycle:
+        prevent_destroy: true
