@@ -23,15 +23,16 @@ targets:
   dev_shared:
     mode: production
     workspace:
-      host: https://adb-7405616270532932.12.azuredatabricks.net/
+      host: https://adb-7405606071868680.0.azuredatabricks.net
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog: dev
+      catalog: dev_shared
+      schema_name: bronze_shared
 
   prod:
     mode: production
     workspace:
-      host: <PROD_WORKSPACE_HOST>
+      host: https://adb-7405616270532932.12.azuredatabricks.net/
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog: prod

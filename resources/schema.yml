@@ -4,8 +4,4 @@ resources:
       catalog_name: ${var.catalog}
       name: ${var.schema_name}
       comment: Bronze layer for the orders demo. Managed by Databricks Asset Bundle dab_orders_demo.
-      grants:
-        - principal: <DEV_GROUP>
-          privileges:
-            - USE_SCHEMA
-            - SELECT
+

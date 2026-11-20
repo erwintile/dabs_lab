@@ -6,7 +6,6 @@ resources:
       schedule:
         quartz_cron_expression: "0 0 14 * * ?"
         timezone_id: Asia/Ho_Chi_Minh
-        pause_status: UNPAUSED
       parameters:
         - name: catalog
           default: ${var.catalog}
