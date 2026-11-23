@@ -1,5 +1,5 @@
 bundle:
-  name: dab_orders_demo_son_thanh_hoa
+  name: dab_orders_demo
 
 include:
   - resources/*.yml
@@ -7,9 +7,6 @@ include:
 variables:
   catalog:
     description: Unity Catalog catalog to deploy.
-  schema_name:
-    description: Base name of the bronze schema.
-    default: bronze
 
 targets:
   dev:
@@ -20,7 +17,6 @@ targets:
     variables:
       catalog: dev
 
-
   dev_shared:
     mode: production
     workspace:
@@ -28,7 +24,6 @@ targets:
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog: dev_shared
-      schema_name: bronze_shared
 
   prod:
     mode: production
@@ -37,4 +32,3 @@ targets:
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog: prod
-      schema_name: bronze_prod
