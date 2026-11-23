@@ -1,7 +1,7 @@
-resources:
-  schemas:
-    bronze:
-      catalog_name: ${resources.catalogs.main.name}
-      name: ${var.schema_name}
-      comment: Bronze layer for the orders demo. Managed by Databricks Asset Bundle dab_orders_demo.
+# resources:
+#   schemas:
+#     bronze:
+#       catalog_name: ${resources.catalogs.main.name}
+#       name: ${var.schema_name}
+#       comment: Bronze layer for the orders demo. Managed by Databricks Asset Bundle dab_orders_demo.
 

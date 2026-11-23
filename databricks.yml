@@ -17,6 +17,7 @@ targets:
     variables:
       catalog: dev
 
+
   dev_shared:
     mode: production
     workspace:

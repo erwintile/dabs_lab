@@ -3,6 +3,17 @@ resources:
     main:
       name: ${var.catalog}
       storage_root: abfss://unitycatalog@sttilesonledabs.dfs.core.windows.net/dab_orders_demo/${var.catalog}
-      comment: Catalog for dab_orders_demo. Managed by Databricks Asset Bundle dab_orders_demo.
-      lifecycle:
-        prevent_destroy: true
+      comment: When creating catalog, store its managed tables inside this existing Azure folder.
+      # lifecycle:
+      #   prevent_destroy: true
+
+
+    ti_test:
+      name: ti_test
+      storage_root: abfss://unitycatalog@sttilesonledabs.dfs.core.windows.net/dab_orders_demo_2/ti_test
+    
+  schemas:
+    ti_schemas:
+      catalog_name: ${resources.catalogs.ti_test.name}
+      name: ti_schema_name
+
