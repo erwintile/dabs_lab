@@ -7,6 +7,9 @@
 
 resources:
   schemas:
-    ti_schemas:
-      catalog_name: ${resources.catalogs.ti_test.name}
-      name: ti_schema_name
+    bronze:
+      catalog_name: ${resources.catalogs.main.name}
+      name: bronze
+
+    
+    

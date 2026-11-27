@@ -4,11 +4,6 @@ resources:
       name: ${var.catalog}
       storage_root: abfss://unitycatalog@sttilesonledabs.dfs.core.windows.net/dab_orders_demo/${var.catalog}
       comment: When creating catalog, store its managed tables inside this existing Azure folder.
-      # lifecycle:
-      #   prevent_destroy: true
-
-
-    ti_test:
-      name: ti_test
-      storage_root: abfss://unitycatalog@sttilesonledabs.dfs.core.windows.net/dab_orders_demo/ti_test
+      lifecycle:
+        prevent_destroy: true
 
