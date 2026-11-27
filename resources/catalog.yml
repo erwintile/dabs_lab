@@ -10,10 +10,5 @@ resources:
 
     ti_test:
       name: ti_test
-      storage_root: abfss://unitycatalog@sttilesonledabs.dfs.core.windows.net/dab_orders_demo_2/ti_test
-    
-  schemas:
-    ti_schemas:
-      catalog_name: ${resources.catalogs.ti_test.name}
-      name: ti_schema_name
+      storage_root: abfss://unitycatalog@sttilesonledabs.dfs.core.windows.net/dab_orders_demo/ti_test
 

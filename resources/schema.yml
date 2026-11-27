@@ -5,3 +5,8 @@
 #       name: ${var.schema_name}
 #       comment: Bronze layer for the orders demo. Managed by Databricks Asset Bundle dab_orders_demo.
 
+resources:
+  schemas:
+    ti_schemas:
+      catalog_name: ${resources.catalogs.ti_test.name}
+      name: ti_schema_name
