@@ -1,0 +1,12 @@
+resources:
+  jobs:
+    ingest_orders_job:
+      name: ingest_orders_job
+      max_concurrent_runs: 1
+      schedule:
+        quartz_cron_expression: "0 0 14 * * ?"
+        timezone_id: Asia/Ho_Chi_Minh
+      tasks:
+        - task_key: ingest_orders
+          notebook_task:
+            notebook_path: ../src/hello_world.ipynb

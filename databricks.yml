@@ -1,0 +1,35 @@
+bundle:
+  name: dab_orders_demo
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    description: Unity Catalog catalog to deploy.
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-7405606071868680.0.azuredatabricks.net
+    variables:
+      catalog: dev
+
+
+  dev_shared:
+    mode: production
+    workspace:
+      host: https://adb-7405606071868680.0.azuredatabricks.net
+      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: dev_shared
+
+  prod:
+    mode: production
+    workspace:
+      host: https://adb-7405616270532932.12.azuredatabricks.net/
+      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: prod
